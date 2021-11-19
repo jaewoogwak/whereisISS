@@ -10,9 +10,8 @@ const Iss = (props) => {
                     <hr class="mw6 bb bw1 b--black-10 mt4" />
                 </div>
                 <p class="lh-copy measure center f6 black-70 tc pa2">
-                    <h2>응답 : {props.data.message}</h2>
-                    <h2>위도 : {props.data.iss_position.longitude}</h2>
-                    <h2>경도 : {props.data.iss_position.latitude}</h2>
+                    <h2>위도 : {props.data.iss_position.latitude}</h2>
+                    <h2>경도 : {props.data.iss_position.longitude}</h2>
                     <h2>타임스탬프 : {props.data.timestamp}</h2>
                 </p>
             </article>

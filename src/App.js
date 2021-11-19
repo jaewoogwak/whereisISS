@@ -15,7 +15,7 @@ class App extends React.Component {
         }
       }
     }
-    setInterval(this.run, 3000)
+    this.run();
   }
   getData = async () => {
     const url = await fetch('http://api.open-notify.org/iss-now.json');
@@ -26,13 +26,15 @@ class App extends React.Component {
 
   run = async () => {
     // tdhis.timer = setInterval(this.getData, 3000);aafdsafdsaaafdsafdas
-    console.log('this,timer', this.timer);
+    // console.log('this,timer', this.timer);
     const data = await this.getData()
     this.setState({ data : data});
   }
 
   componentWillUnmount() {
     clearInterval(this.timer);
+    document.title = "Where is ISS now?"
+
   }
   render() {
     console.log('data', this.state.data);
